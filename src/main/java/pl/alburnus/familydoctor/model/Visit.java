@@ -1,5 +1,8 @@
 package pl.alburnus.familydoctor.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -9,11 +12,19 @@ public class Visit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
+
     private String place;
+
     private String type;
+
     private String doctorName;
+
     private String comments;
+
     @ManyToOne
     private Patient patient;
 
