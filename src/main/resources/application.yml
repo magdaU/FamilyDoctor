@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true # potrzebne w spring2 - zobaczyæ czy dalej bêdzie potrzebne po podwy¿szeniu bazy postgre?
+  datasource:
+    url: jdbc:postgresql://localhost:5432/familydoctor
+    username: familydoctor
+    password: familydoctor
