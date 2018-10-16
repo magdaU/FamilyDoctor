@@ -4,15 +4,12 @@ Family Doctor backend
 
 
 # Swagger 
-zrodla:https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
-zrodla:https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/
 
-1)Konfiguracja Swagger w osobnej paczce ponieważ trzymam się pojedynczej odpowiedzialnosci --> Single Responsibility.
-Config SwaggerConfig z klasą jawową SwaggerConfig, nalezy wpisać kongurację np @Configuration...(4.1 ze strony  
-https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api) uzupełnione o rozszerzenia extends ( ze 
-strony https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/ - pkt.Configurating Swagger 2 in Application,
-lecz nie cały).
-2)oraz uzupełnić pom o dependency  (jeden obsługuje UI - interfejs, drugi udostępnia całe api systemu i wystwietla jsonem )   
+1. Konfiguracja Swagger w osobnej paczce, ponieważ trzymam się pojedynczej odpowiedzialności --> Single Responsibility.
+    1. Config SwaggerConfig z klasą Java SwaggerConfig, należy wpisać konfigurację za pomocą adnotacji @Configuration – szczegóły w pkt. 4.1 ze strony  
+https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api.  
+    1. Jako, że używam Spring Boot 2 konfiguracja musi rozszerzać klasę WebMvcConfigurationSupport – wskazówka na stronie https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/ w pkt. Configurating Swagger 2 in Application
+2. Uzupełnić pom o dependency  (jeden udostępnia całe API systemu, drugi obsługuje UI – interfejs graficzny)   
 ```xml
 
                        <dependency>
@@ -26,5 +23,11 @@ lecz nie cały).
                               <version>2.9.2</version>
                           </dependency> 
 ``` 
-postepy mojej dotychczasowej pracy widac na stronie:                                         
+
+Postępy mojej dotychczasowej pracy widać na stronie:                                         
 http://localhost:8080/swagger-ui.html#/patient-resource
+ 
+## Źródła
+* https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+* https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/
+
