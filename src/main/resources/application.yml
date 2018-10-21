@@ -8,8 +8,14 @@ spring:
       hibernate:
         jdbc:
           lob:
-            non_contextual_creation: true # potrzebne w spring2 - zobaczyæ czy dalej bêdzie potrzebne po podwy¿szeniu bazy postgre?
+            non_contextual_creation: true # potrzebne w spring2 - zobaczyï¿½ czy dalej bï¿½dzie potrzebne po podwyï¿½szeniu bazy postgre?
   datasource:
     url: jdbc:postgresql://localhost:5432/familydoctor
     username: familydoctor
     password: familydoctor
+
+logging:
+  level:
+    pl:
+      alburnus:
+        familydoctor: DEBUG

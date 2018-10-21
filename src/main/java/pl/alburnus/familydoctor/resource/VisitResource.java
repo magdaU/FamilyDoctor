@@ -13,17 +13,28 @@ public class VisitResource {
 
     private final VisitRepository visitRepository;
 
-    public VisitResource(VisitRepository visitRepository){
-        this.visitRepository=visitRepository;
+    public VisitResource(VisitRepository visitRepository) {
+        this.visitRepository = visitRepository;
     }
-    @GetMapping
+
+    @GetMapping("/patient/{idPatient}")
     @ResponseStatus(HttpStatus.OK)
-    public List<Visit> getAll(){
-        return visitRepository.findAll();
+    public List<Visit> getAllVisitByPatientId(@PathVariable("idPatient") Long idPatient) {
+        return visitRepository.getAllByPatientId(idPatient);
     }
+
     @PostMapping
-    public void create(@RequestBody Visit visit){
+    public void create(@RequestBody Visit visit) {
         visitRepository.save(visit);
     }
 
+    @DeleteMapping("/{visitId}")
+    public void delete(@PathVariable("visitId") Long idVisit) {
+        visitRepository.deleteById(idVisit);
+    }
+
+    @PutMapping
+    public void update(@RequestBody Visit visit) {
+        visitRepository.getOne(visit.getId());
+    }
 }

@@ -7,4 +7,7 @@ import pl.alburnus.familydoctor.model.Patient;
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, Long> {
 
+    // FIXME ignoreCaseSensitive
+    Boolean existsByNicknameIsNot(String nickname);
+
 }
