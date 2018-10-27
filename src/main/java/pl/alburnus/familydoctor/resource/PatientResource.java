@@ -27,4 +27,14 @@ public class PatientResource {
     public void create(@RequestBody Patient patient) {
         patientService.save(patient);
     }
+
+    @DeleteMapping("/{patientId}")
+    public void delete(@PathVariable("patientId") Patient patient) {
+        patientService.delete(patient);
+    }
+
+    @PutMapping
+    public void update(@RequestBody Patient patient) {
+        patientService.update(patient);
+    }
 }
