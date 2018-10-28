@@ -29,4 +29,16 @@ public class PatientService {
             LOGGER.debug("Not exist, so add new nickname: {}", patient.getNickname());
         }
     }
+    public void delete(Patient patientId) {
+        if (patientRepository.existsById(patientId.getId())) {
+            //Logger.info("Czy chcesz usunuąć danego pacjenta")
+            patientRepository.delete(patientId);
+        }
+    }
+    public void update(Patient patient){
+        if(patientRepository.existsByNicknameIsNot(patient.getNickname())){
+            patientRepository.save(patient);
+
+        }
+    }
 }
