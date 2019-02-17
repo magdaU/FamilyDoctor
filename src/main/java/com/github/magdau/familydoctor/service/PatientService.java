@@ -1,10 +1,10 @@
-package pl.alburnus.familydoctor.service;
+package com.github.magdau.familydoctor.service;
 
+import com.github.magdau.familydoctor.model.Patient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import pl.alburnus.familydoctor.model.Patient;
-import pl.alburnus.familydoctor.repository.PatientRepository;
+import com.github.magdau.familydoctor.repository.PatientRepository;
 
 import java.util.List;
 

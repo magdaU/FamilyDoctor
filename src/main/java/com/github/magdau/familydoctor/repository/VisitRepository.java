@@ -1,8 +1,8 @@
-package pl.alburnus.familydoctor.repository;
+package com.github.magdau.familydoctor.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import pl.alburnus.familydoctor.model.Visit;
+import com.github.magdau.familydoctor.model.Visit;
 
 import java.util.List;
 

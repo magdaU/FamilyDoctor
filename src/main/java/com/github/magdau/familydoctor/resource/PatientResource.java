@@ -1,9 +1,9 @@
-package pl.alburnus.familydoctor.resource;
+package com.github.magdau.familydoctor.resource;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pl.alburnus.familydoctor.model.Patient;
-import pl.alburnus.familydoctor.service.PatientService;
+import com.github.magdau.familydoctor.model.Patient;
+import com.github.magdau.familydoctor.service.PatientService;
 
 import java.util.List;
 
