@@ -1,4 +1,4 @@
-package com.github.magdau.familydoctor.config;
+package com.github.magdau.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

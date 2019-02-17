@@ -1,4 +1,4 @@
-package com.github.magdau.familydoctor.model;
+package com.github.magdau.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.github.magdau.familydoctor;
+package com.github.magdau;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,9 +1,9 @@
-package com.github.magdau.familydoctor.resource;
+package com.github.magdau.resource;
 
+import com.github.magdau.model.Patient;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import com.github.magdau.familydoctor.model.Patient;
-import com.github.magdau.familydoctor.service.PatientService;
+import com.github.magdau.service.PatientService;
 
 import java.util.List;
 

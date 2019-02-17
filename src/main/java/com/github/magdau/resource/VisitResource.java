@@ -1,9 +1,9 @@
-package com.github.magdau.familydoctor.resource;
+package com.github.magdau.resource;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import com.github.magdau.familydoctor.model.Visit;
-import com.github.magdau.familydoctor.repository.VisitRepository;
+import com.github.magdau.model.Visit;
+import com.github.magdau.repository.VisitRepository;
 
 import java.util.List;
 

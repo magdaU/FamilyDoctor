@@ -1,4 +1,4 @@
-package com.github.magdau.familydoctor;
+package com.github.magdau;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

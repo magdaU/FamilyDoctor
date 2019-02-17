@@ -1,8 +1,8 @@
-package com.github.magdau.familydoctor.repository;
+package com.github.magdau.repository;
 
+import com.github.magdau.model.Visit;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.github.magdau.familydoctor.model.Visit;
 
 import java.util.List;
 
