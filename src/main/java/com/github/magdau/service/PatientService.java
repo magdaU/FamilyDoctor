@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PatientService {
@@ -24,21 +25,23 @@ public class PatientService {
     }
 
     public void save(Patient patient) {
-        if (patientRepository.existsByNicknameIsNot(patient.getNickname())) {
+        Optional<Patient> foundPatient = patientRepository.findPatientByNicknameIgnoreCase(patient.getNickname());
+        if (!foundPatient.isPresent()) {
             patientRepository.save(patient);
             LOGGER.debug("Not exist, so add new nickname: {}", patient.getNickname());
         }
     }
-    public void delete(Patient patientId) {
-        if (patientRepository.existsById(patientId.getId())) {
-            //Logger.info("Czy chcesz usunuąć danego pacjenta")
-            patientRepository.delete(patientId);
+
+    public void delete(Long patientId) {
+        if (patientRepository.existsById(patientId)) {
+            patientRepository.deleteById(patientId);
         }
     }
-    public void update(Patient patient){
-        if(patientRepository.existsByNicknameIsNot(patient.getNickname())){
-            patientRepository.save(patient);
 
+    public void update(Patient patient){
+        Optional<Patient> foundPatient = patientRepository.findById(patient.getId());
+        if(foundPatient.isPresent()){
+            patientRepository.save(patient);
         }
     }
 }

@@ -29,8 +29,8 @@ public class PatientResource {
     }
 
     @DeleteMapping("/{patientId}")
-    public void delete(@PathVariable("patientId") Patient patient) {
-        patientService.delete(patient);
+    public void delete(@PathVariable("patientId") Long patientId) {
+        patientService.delete(patientId);
     }
 
     @PutMapping
