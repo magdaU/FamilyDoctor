@@ -1,4 +1,4 @@
-package pl.alburnus.familydoctor;
+package com.github.magdau;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
