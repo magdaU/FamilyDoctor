@@ -33,7 +33,7 @@ http://localhost:8080/swagger-ui.html#/patient-resource
 
 
 
-QuickStart to Create Spring Project:
+## QuickStart to Create Spring Project:
 IntelliJ
 Project -> Spring Initilazer -> Next ->
 *Group (com.github.magdauk) - the same like Package
@@ -43,6 +43,7 @@ Web: Web
 SQL: Postgresql
 -> Next 
 
+## Others
 gitIgnore -> ignore file to push in branch
 pom -> libarry, dependency, plugin
 source -> main (implementation)
