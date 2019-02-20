@@ -31,3 +31,19 @@ http://localhost:8080/swagger-ui.html#/patient-resource
 * https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
 * https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/
 
+
+
+QuickStart to Create Spring Project:
+IntelliJ
+Project -> Spring Initilazer -> Next ->
+*Group (com.github.magdauk) - the same like Package
+*Artifact (FamilyDoctor)-> Next 
+Core: Lombock
+Web: Web
+SQL: Postgresql
+-> Next 
+
+gitIgnore -> ignore file to push in branch
+pom -> libarry, dependency, plugin
+source -> main (implementation)
+
