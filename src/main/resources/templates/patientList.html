@@ -11,21 +11,27 @@
 <div class="container">
     <h3>Patients</h3>
     <hr>
-    <table class="table">
-        <thead class="thead-dark">
-        <tr>
-            <th>NickName</th>
-            <th>Id</th>
-        </tr>
-        </thead>
+    <div class="table-responsive-md">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>NickName</th>
+                <th>Id</th>
+                <th>Show patient details</th>
+            </tr>
+            </thead>
 
-        <tbody>
-        <tr th:each="tempPatient : ${patients}">
-            <td th:text="${tempPatient.nickname}"/>
-            <td th:text="${tempPatient.id}"/>
-        </tr>
-        </tbody>
-    </table>
+            <tbody>
+            <tr th:each="tempPatient : ${patients}">
+                <td th:text="${tempPatient.nickname}"/>
+                <td th:text="${tempPatient.id}"/>
+                <td><a th:href="@{'/patients/detail/'+${tempPatient.id}}">
+                    <button class="btn btn-info col-2">Details</button>
+                </a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 </body>
 </html>

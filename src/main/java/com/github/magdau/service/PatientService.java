@@ -24,6 +24,10 @@ public class PatientService {
         return patientRepository.findAll();
     }
 
+    public Optional<Patient> getById(Long id){
+        return patientRepository.findById(id);
+    }
+
     public void save(Patient patient) {
         Optional<Patient> foundPatient = patientRepository.findPatientByNicknameIgnoreCase(patient.getNickname());
         if (!foundPatient.isPresent()) {
