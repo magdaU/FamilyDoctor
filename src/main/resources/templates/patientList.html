@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Patient Directory</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h3>Patients</h3>
+    <hr>
+    <div class="table-responsive-md">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>NickName</th>
+                <th>Id</th>
+                <th>Show patient details</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="tempPatient : ${patients}">
+                <td th:text="${tempPatient.nickname}"/>
+                <td th:text="${tempPatient.id}"/>
+                <td><a th:href="@{'/patients/detail/'+${tempPatient.id}}">
+                    <button class="btn btn-info col-2">Details</button>
+                </a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
