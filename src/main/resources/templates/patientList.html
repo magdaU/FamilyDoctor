@@ -35,6 +35,9 @@
                         >Delete
                         </button>
                     </a>
+                    <a th:href="@{'/patients/edit/'+${tempPatient.id}}">
+                        <button class="btn btn-success col-2">Edit patient</button>
+                    </a>
                 </td>
             </tr>
             </tbody>
