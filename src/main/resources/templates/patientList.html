@@ -25,9 +25,17 @@
             <tr th:each="tempPatient : ${patients}">
                 <td th:text="${tempPatient.nickname}"/>
                 <td th:text="${tempPatient.id}"/>
-                <td><a th:href="@{'/patients/detail/'+${tempPatient.id}}">
-                    <button class="btn btn-info col-2">Details</button>
-                </a></td>
+                <td>
+                    <a th:href="@{'/patients/detail/'+${tempPatient.id}}">
+                        <button class="btn btn-info col-2">Details</button>
+                    </a>
+                    <a th:href="@{'/patients/delete/'+${tempPatient.id}}">
+                        <button class="btn btn-danger col-2"
+                                onclick="if (!(confirm('Are you sure you want to delete this employee?'))) return false"
+                        >Delete
+                        </button>
+                    </a>
+                </td>
             </tr>
             </tbody>
         </table>
