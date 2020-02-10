@@ -60,7 +60,7 @@ public class PatientServiceTest {
     @Test
     public void whenPatientNotFound_thenDoNothing() {
         //given
-        Mockito.when(patientRepository.findById(1L)).thenReturn(Optional.empty());
+//        Mockito.when(patientRepository.findById(1L)).thenReturn(Optional.empty());
         //when
         patientService.update(new Patient());
         //then

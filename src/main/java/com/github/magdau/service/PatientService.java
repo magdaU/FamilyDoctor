@@ -4,7 +4,6 @@ import com.github.magdau.model.Patient;
 import com.github.magdau.repository.PatientRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,8 +25,7 @@ public class PatientService {
 
     public List<Patient> getAllPatient() {
         // TODO improve and introduce user class
-        Authentication currentContext = securityContextService.getCurrentContext();
-        System.out.println(currentContext.getName());
+        System.out.println(securityContextService.getCurrentContext());
         return patientRepository.findAll();
     }
 

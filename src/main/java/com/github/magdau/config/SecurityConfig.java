@@ -13,6 +13,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+
+    // TODO Improve security
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -23,9 +25,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/css/**",
                         "/img/**",
                         "/webjars/**").permitAll()
-                .antMatchers("/patients/**").hasRole("USER")
-                .anyRequest().authenticated()
-                .and()
+//                .antMatchers("/patients/**").hasRole("USER")
+//                .antMatchers("/**").permitAll()
+                .anyRequest().permitAll()
+                .and().httpBasic().and().csrf().disable()
                 .formLogin()
                 .permitAll()
                 .and()
